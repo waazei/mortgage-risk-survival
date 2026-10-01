@@ -1,0 +1,22 @@
+check,passed,detail
+result:kaplan_meier_summary.csv,True,present and non-empty
+result:competing_risks_cif_summary.csv,True,present and non-empty
+result:cox_ph_default.csv,True,present and non-empty
+result:cause_specific_cox_default.csv,True,present and non-empty
+result:cause_specific_cox_prepayment.csv,True,present and non-empty
+result:ph_assumption_summary.csv,True,present and non-empty
+result:cif_identity_check.csv,True,present and non-empty
+result:fine_gray_default.csv,True,present and non-empty
+result:vintage_cif_summary.csv,True,present and non-empty
+result:vintage_cif_curve.csv,True,present and non-empty
+result:cox_sensitivity_complete_case.csv,True,present and non-empty
+result:kaplan_meier_curve.png,True,present and non-empty
+result:competing_risks_cif.png,True,present and non-empty
+result:vintage_default_cif.png,True,present and non-empty
+model:cause_specific_cox_default.csv,True,"finite, converged estimates with plausible standardized coefficients"
+model:cause_specific_cox_prepayment.csv,True,"finite, converged estimates with plausible standardized coefficients"
+loan_level:unique_loan_id,True,"18,938,291 unique IDs / 18,938,291 rows"
+loan_level:valid_time,True,loan_age is numeric and non-negative
+loan_level:event_codes,True,"event in {0,1}; cr_event in {0,1,2}"
+loan_level:event_consistency,True,"event_type, event, and cr_event agree"
+cif:identity,True,maximum |S + CIF_default + CIF_prepayment - 1| = 0.000776628 (tolerance 0.01)
